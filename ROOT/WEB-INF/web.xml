@@ -1,0 +1,9 @@
+<web-app id="/">
+  <servlet servlet-name='Main'
+           servlet-class='Main' >
+           <load-on-startup/>
+  </servlet>
+  <servlet-mapping url-pattern='/Main'
+                   servlet-name='Main'/>
+
+</web-app>
