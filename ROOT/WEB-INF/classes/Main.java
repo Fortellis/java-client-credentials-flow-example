@@ -24,12 +24,12 @@ public class Main extends HttpServlet{
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         PrintWriter out = response.getWriter();
-        URL url = new URL("https://identity-dev.fortellis.io/oauth2/aus1ni5i9n9WkzcYa2p7/v1/token");
+        URL url = new URL("https://identity.fortellis.io/oauth2/aus1p1ixy7YL8cMq02p7/v1/token");
         String postData = "grant_type=client_credentials&scope=anonymous";
  
         URLConnection conn = url.openConnection();
         conn.setDoOutput(true);
-        conn.setRequestProperty("Authorization", "Basic UW5OeExtYVJFVFdDZVZ3bEZUeUgwUnBucnQ3S2pyT286VnhubDVva2VVQ2M1eGFuTg==");
+        conn.setRequestProperty("Authorization", "Basic base64Encoded{yourAPIKey:yourAPISecret}");
         conn.setRequestProperty("Accept", "application/json");
         conn.setRequestProperty("Cache-Control", "no-cache");
         conn.setRequestProperty("Content-Length", Integer.toString(postData.length()));
